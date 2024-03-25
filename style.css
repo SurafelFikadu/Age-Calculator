@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    background-color: white;
+    width: 640px;
+    padding: 33px;
+    border-radius: 27px 27px 120px 27px;
+}
+
+.date-container {
+    display: flex;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-weight: 700;
+}
+
+label {
+    color: hsl(0, 0%, 8%);
+}
+
+input {
+    font-size: 32px;
+    width: 140px;
+    padding: 10px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid rgb(233, 223, 223);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 75px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.hr-button {
+    display: flex;
+}
+
+hr {
+    flex-grow: 1;
+    height: 1px;
+    margin-top: 30px;
+    width: 500px;
+}
+
+img {
+    width: 30px;
+}
+
+.purple {
+    color: hsl(259, 100%, 65%);
+}
+
+button {
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    border: none;
+    padding: 21px;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(95%);
+    background-color: black;
+}
+
+.error {
+    font-size: small;
+    font-weight: 500;
+    color: red;
+}
+
+
+@media(max-width: 768px) {
+    main {
+        width: 372px;
+    }
+
+    input {
+        font-size: 21px;
+        width: 80px;
+    }
+
+    #input-year {
+        width: 92px;
+    }
+
+    label {
+        font-size: small;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    button {
+        padding: 16px;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    .hr-button {
+        display: block;
+    }
+
+    hr {
+        width: 300px;
+        z-index: 0;
+    }
+
+    button {
+        margin-left: 120px;
+        margin-top: -33px;
+    }
+}

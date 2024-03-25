@@ -1,0 +1,41 @@
+let inputDay = document.getElementById("input-day");
+let inputMonth = document.getElementById("input-month");
+let inputYear = document.getElementById("input-year");
+let displayDay = document.getElementById("display-day");
+let displayMonth = document.getElementById("display-month");
+let displayYear = document.getElementById("display-year");
+let submitButton = document.getElementById("submit-button");
+
+let date = new Date;
+
+let newDay = date.getDate();
+let newMonth = 1 + date.getMonth();
+let newYear = date.getFullYear();
+
+let monthList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+let inputDayValue = inputDay.value;
+let inputMonthValue = inputMonth.value
+let inputYearValue = inputYear.value
+
+    let day = newDay - inputDayValue;
+    let month = newMonth - inputMonthValue;
+    let year = newYear - inputYearValue;
+
+function calculateAge()  {
+    if(inputDayValue > newDay){
+        newDay = newDay + monthList[newMonth - 1];
+        newMonth = newMonth - 1;
+    }
+
+    if(inputMonthValue > newMonth) {
+        newMonth = newMonth + 12;
+        newYear = newYear - 1;
+    }
+
+    displayDay.innerHTML = day;
+    displayYear.innerHTML = year;
+    displayMonth.innerHTML = month;
+}
+
+submitButton.addEventListener("click", calculateAge);
